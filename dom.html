@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .blog{
+            border: 2px solid orange;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <header><h1>Welcome to My Blog Website
+    </h1></header>
+    <main>
+        <section  id="blogs">
+            <header>
+                <h2>Blog List</h2>
+                <ul id="blog-list">
+                    <li>Blog-1</li>
+                    <li>Blog-2</li>
+                    <li>Blog-3</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
+            <article class="blog">
+                <h3 id="first-title">My Awesome Blog-1</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, at excepturi. Facilis inventore delectus est vitae aliquam facere cum nobis officia. Natus ratione modi nemo aut ducimus nobis inventore ipsam.</p>
+            </article>
+            <article id="second-blog" class="blog">
+                <h3 id="second-title">My Awesome Blog-2</h3>
+                <p>Neque eos doloremque at sunt dolorum autem explicabo, architecto cumque accusantium dignissimos a tempora quidem maxime atque animi quas! Et esse nesciunt temporibus, corporis blanditiis minus rerum ex ea odio!</p>
+            </article>
+            <article class="blog">
+                <h3 id="third-title">My Awesome Blog-3</h3>
+                <p>Eius nobis veritatis ab, quaerat at dicta ea voluptas dignissimos distinctio corrupti accusantium asperiores? Voluptatum illo eaque error! Eaque magni voluptatibus perferendis similique hic modi voluptas et cupiditate esse consequuntur!</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const student = { name: "Rahman Ali", age:30, height:50}
+        console.log(document.body);
+        const blogTitles = document.getElementsByTagName('article');
+        for(const blog of blogTitles){
+           // console.log(blog);
+        }
+        const blogdetails = document.getElementsByTagName('p');
+        for(const p of blogTitles){
+            //console.log(p.innerText);
+        }
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+        const third = document.getElementById('third-title');
+        third.innerText = 'Title Updated By JS';
+        third.style.backgroundColor = 'red';
+        third.style.padding = '10px';
+        document.getElementById('first-title').innerText = 'Love is Power';
+        // getElementsByClassName
+        const blogs = document.getElementsByClassName('blog');
+        for(const blog of blogs){
+            console.log(blog);
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '10px';
+            blog.style.padding = '20px';
+        }
+        document.getElementsByTagName('');
+        //document.getElementsByClassName('blog');
+        //document.getElementById('second-title');
+        //css id class catch
+        // document.querySelector('.blog')
+        // document.querySelectorAll('.blog')
+        // document.querySelector('#second-blog')
+        // document.querySelectorAll('#second-blog')
+
+        // create an element by JavaScript
+        //create the element
+        const li = document.createElement('li');
+        li.innerText = 'Blog-5';
+        // where to add
+        const ul = document.getElementById('blog-list')
+        // append new element
+        ul.appendChild(li);
+
+        // add article
+
+        const article = document.createElement('article');
+        // add blog class into article 
+        article.classList.add('blog');
+        // const h3 = document.createElement('h3');
+        // h3.innerText= 'My Awesome Blog-5';
+        // const p = document.createElement('p');
+        // p.innerText = 'p added by js';
+        // article.appendChild(h3);
+        // article.appendChild(p);
+        article.innerHTML = `
+        <h3>My Awesome Blog-5 </h3>
+        <p>Eius nobis veritatis ab, quaerat at dicta ea voluptas dignissimos distinctio corrupti accusantium asperiores? Voluptatum illo eaque error! Eaque magni voluptatibus perferendis similique hic modi voluptas et cupiditate esse consequuntur!</p> `
+
+        // parent of article
+        const blogSection = document.getElementById('blogs');
+        blogSection.appendChild(article);
+
+        
+        </script>
+</body>
+</html>
